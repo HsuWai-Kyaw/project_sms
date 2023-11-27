@@ -1,0 +1,29 @@
+department - done
+courses - done
+room - done
+role - done
+teacher - done
+classes - done
+subject - done
+course-teacher - done
+student - done
+enrollment - pending
+schedule - pending
+attenance - pending
+
+
+///////////////////////////
+SELECT
+    attendance.attendance_id,
+    attendance.student_id,
+    attendance.date,
+    course.course_id,
+    course.course_name,
+    subject.subject_id,
+    subject.subject_name
+FROM
+    attendance
+JOIN
+    course ON attendance.course_id = course.course_id
+JOIN
+    subject ON course.course_id = subject.course_id;
